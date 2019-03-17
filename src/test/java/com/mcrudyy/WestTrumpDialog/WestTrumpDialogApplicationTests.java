@@ -3,6 +3,7 @@ package com.mcrudyy.WestTrumpDialog;
 import com.mcrudyy.WestTrumpDialog.model.Quote;
 import com.mcrudyy.WestTrumpDialog.model.west.WestQuote;
 import com.mcrudyy.WestTrumpDialog.services.DialogServiceImpl;
+import com.mcrudyy.WestTrumpDialog.services.TrumpService;
 import com.mcrudyy.WestTrumpDialog.services.intefaces.DialogService;
 import com.mcrudyy.WestTrumpDialog.services.intefaces.QuoteService;
 import org.junit.Test;
@@ -23,9 +24,9 @@ public class WestTrumpDialogApplicationTests {
     @Autowired
 	QuoteService westService;
 
-    @Qualifier("trumpService")
+    //@Qualifier("trumpService")
     @Autowired
-    QuoteService trumpService;
+    TrumpService trumpService;
 
     @Autowired
     DialogService dialogService;
