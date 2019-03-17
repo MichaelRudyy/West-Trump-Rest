@@ -13,6 +13,7 @@ import java.util.concurrent.CompletableFuture;
 @Service
 @Slf4j
 public class TrumpService implements QuoteService {
+
     @Override
     @Async
     public CompletableFuture<Quote> getQuote() {

@@ -33,12 +33,11 @@ public class DialogServiceImpl implements DialogService {
         log.debug("Run Trump Service");
         Future<Quote> trumpQuoteFuture = trumpService.getQuote();
 
-        while (true){
-            if(westQuoteFuture.isDone() && trumpQuoteFuture.isDone()) break;
+        while (!westQuoteFuture.isDone() && !trumpQuoteFuture.isDone()) {
             Thread.sleep(10);
         }
 
-        log.info("Quotes are Ready");
+        log.debug("Quotes are Ready");
         return new Dialog(westQuoteFuture.get().getMessage(),trumpQuoteFuture.get().getMessage());
     }
 }

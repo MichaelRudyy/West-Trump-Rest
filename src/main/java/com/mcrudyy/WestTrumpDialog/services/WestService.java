@@ -16,7 +16,7 @@ public class WestService implements QuoteService {
 
     @Override
     @Async
-    public CompletableFuture<Quote> getQuote(){
+    public CompletableFuture<Quote> getQuote() {
         RestTemplate restTemplate = new RestTemplate();
 
         WestQuote quote = restTemplate.getForObject("https://api.kanye.rest", WestQuote.class);

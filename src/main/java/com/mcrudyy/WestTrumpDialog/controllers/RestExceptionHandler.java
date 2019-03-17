@@ -14,7 +14,7 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
     @ExceptionHandler(Exception.class)
     public ResponseEntity handleSomething(){
         log.error("Something goes wrong");
-        return new ResponseEntity(HttpStatus.CONFLICT);
+        return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
 }
